@@ -1,16 +1,17 @@
 <%--
   Created by IntelliJ IDEA.
-  User: zhb
-  Date: 14-7-29
-  Time: 下午8:36
+  User: 敏华
+  Date: 2014/7/29
+  Time: 22:53
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-          this is login success page
-  </body>
+<head>
+    <title>product</title>
+    this is the product page
+</head>
+<body>
+
+</body>
 </html>

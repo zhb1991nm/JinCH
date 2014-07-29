@@ -19,6 +19,6 @@ public class HomeController extends AbstractController{
     @Override
     protected ModelAndView handleRequestInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
         System.out.println("hello hua");
-        return new ModelAndView("index");
+        return new ModelAndView("product");
     }
 }
