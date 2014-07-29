@@ -11,6 +11,6 @@
     <title></title>
   </head>
   <body>
-          this is login success page
+          this is login success page index.jsp
   </body>
 </html>
