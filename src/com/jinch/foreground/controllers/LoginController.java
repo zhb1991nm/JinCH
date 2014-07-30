@@ -1,5 +1,7 @@
 package com.jinch.foreground.controllers;
 
+import com.jinch.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +19,8 @@ import java.util.Map;
  */
 @Controller
 public class LoginController {
+    @Autowired
+    private IUserService userService;
     /**
      * get方式打开login.jsp，即通过链接打开
      * @return
@@ -34,8 +38,13 @@ public class LoginController {
      * @return
      */
     @RequestMapping(value = "/login" , method = RequestMethod.POST) //@RequestMapping("/login1/{username}")
-    public String login1(PrintWriter out,HttpServletRequest request, HttpServletResponse response, HttpSession session,@RequestParam("username") String username,@RequestParam("password") String password){//
+    public String login1(PrintWriter out,HttpServletRequest request, HttpServletResponse response, HttpSession session,@RequestParam("username") String username,@RequestParam("password") String password,Map model){//
         System.out.println("hello,"+request.getParameter("username")+":name:"+username+":password:"+password+" welcome login.");
+
+        String t = userService.checkUserLogin(username,password);
+        model.put("param1",username);
+        model.put("msg",t);
+
         return "index";
         //下面两个要一起，return null
 //        out.println("hello:"+request.getParameter("username"));

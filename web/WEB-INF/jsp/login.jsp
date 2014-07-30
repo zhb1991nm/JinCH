@@ -15,19 +15,26 @@
 <body>
 <table>
     <tr>
-        <form action="/JinCH/login.do" method="post">
-            账号：<input type="text" name="username" id="username">
-            密码：<input type="text" name="password" id="password">
-            <input type="submit" value="登录">
+        <td>
+            <form action="/JinCH/login.do" method="post">
+                账号：<input type="text" name="username" id="username">
+                密码：<input type="text" name="password" id="password">
+                <input type="submit" value="登录">
 
-        </form>
+            </form>
+        </td>
+
     </tr>
     <tr>
-        <form action="/JinCH/testParam.do" method="post">
-            账号：<input type="text" name="param1" id="param1">
-            <input type="submit" value="参数传递测试">
+        <td>
+            <form action="/JinCH/testParam.do" method="post">
+                参数：<input type="text" name="param1" id="param1">
+                <input type="submit" value="参数传递测试">
 
-        </form>
+            </form>
+        </td>
+
+
     </tr>
 </table>
 </body>
