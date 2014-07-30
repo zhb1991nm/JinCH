@@ -23,7 +23,6 @@
 
             </form>
         </td>
-
     </tr>
     <tr>
         <td>
@@ -33,8 +32,6 @@
 
             </form>
         </td>
-
-
     </tr>
 </table>
 </body>
