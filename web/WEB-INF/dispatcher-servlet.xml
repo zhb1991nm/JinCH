@@ -21,8 +21,41 @@
     <!-- 自动扫描的包名 -->
     <context:component-scan base-package="com.jinch"></context:component-scan>
 
+    <!--hibernate 属性配置-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
     <!-- 默认的注解映射的支持 -->
     <mvc:annotation-driven />
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${hibernate.driverlass}"/>
+        <property name="url" value="${hibernate.url}" />
+        <property name="username" value="${hibernate.username}" />
+        <property name="password" value="${hibernate.password}" />
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="com.jinch.entity"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialog">${hibernate.dialog}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+
+               <!-- <prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>-->
+                <prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+                <prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- 配置事务管理 -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <!-- 配置注解实现管理事务（cglib：proxy-target-class="true"） -->
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
+
 
     <!-- 完成请求和注解POJO的映射 -->
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
