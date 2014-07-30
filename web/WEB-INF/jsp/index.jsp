@@ -11,6 +11,7 @@
     <title></title>
   </head>
   <body>
+        hello,${param1}
           this is login success page index.jsp
   </body>
 </html>

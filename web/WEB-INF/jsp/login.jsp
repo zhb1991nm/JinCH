@@ -9,14 +9,26 @@
 <html>
 <head>
     <title>login</title>
-    <form action="/login.do" method="post">
-        账号：<input type="text" name="username" id="username">
-        密码：<input type="text" name="password" id="password">
-        <input type="submit" value="登录">
 
-    </form>
+
 </head>
 <body>
+<table>
+    <tr>
+        <form action="/JinCH/login.do" method="post">
+            账号：<input type="text" name="username" id="username">
+            密码：<input type="text" name="password" id="password">
+            <input type="submit" value="登录">
 
+        </form>
+    </tr>
+    <tr>
+        <form action="/JinCH/testParam.do" method="post">
+            账号：<input type="text" name="param1" id="param1">
+            <input type="submit" value="参数传递测试">
+
+        </form>
+    </tr>
+</table>
 </body>
 </html>
