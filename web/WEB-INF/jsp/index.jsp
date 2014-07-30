@@ -11,7 +11,8 @@
     <title></title>
   </head>
   <body>
-        hello,${param1},the message is ${msg}
+        hello,${param1},the message is "${msg}"
+        <br>
           this is login success page index.jsp
   </body>
 </html>

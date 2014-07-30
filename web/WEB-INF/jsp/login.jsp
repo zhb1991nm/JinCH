@@ -17,9 +17,28 @@
     <tr>
         <td>
             <form action="/JinCH/login.do" method="post">
-                账号：<input type="text" name="username" id="username">
-                密码：<input type="text" name="password" id="password">
-                <input type="submit" value="登录">
+                <tr>
+                    <th>
+                        用户名&nbsp;
+                    </th>
+                    <td>
+                        <input type="text" name="username" id="username">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        密码&nbsp;
+                    </th>
+                    <td>
+                        <input type="text" name="password" id="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="登录">
+                    </td>
+                </tr>
+
 
             </form>
         </td>
