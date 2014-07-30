@@ -24,16 +24,7 @@
             </form>
         </td>
     </tr>
-    <tr>
-        <td>
-            <form action="/JinCH/testParam.do" method="post">
-                参数：<input type="text" name="param1" id="param1">
-                <input type="submit" value="参数传递测试">
 
-            </form>
-        </td>
-    </tr>
 </table>
-test
 </body>
 </html>
