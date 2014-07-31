@@ -18,10 +18,11 @@ public class UserServiceImpl implements IUserService{
     @Override
     public String checkUserLogin(String username, String password) {
         User userInfo = (User) userDao.queryObject("1");
+        List<User> userList = (List<User>) userDao.queryAll();
         String result = "";
-        if(userInfo != null){
+        if(userInfo != null && userList != null){
             System.out.println("userinfo size----->"+userInfo.getLoginName());
-            result = "login name is"+userInfo.getLoginName();
+            result = "login name is"+userInfo.getLoginName() + " total:"+userList.size()+" users";
         }else{
             result = "empty";
         }

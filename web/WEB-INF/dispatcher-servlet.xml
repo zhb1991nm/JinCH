@@ -46,6 +46,8 @@
                 <!--<prop key="hibernate.cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</prop>-->
                 <prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
                 <prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+                <!-- 解决no session found -->
+                <prop key="hibernate.current_session_context_class">${hibernate.current_session_context_class}</prop>
             </props>
         </property>
     </bean>
