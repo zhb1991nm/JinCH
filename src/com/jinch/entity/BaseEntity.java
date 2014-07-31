@@ -13,8 +13,6 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class BaseEntity {
     @Id
-    @GeneratedValue(generator="uuid")
-    @GenericGenerator(name="uuid",strategy="assigned")
     @Column(name="data_id",length=32)
     protected String dataId;
 }

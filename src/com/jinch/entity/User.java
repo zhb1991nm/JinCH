@@ -2,24 +2,30 @@ package com.jinch.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * Created by 敏华 on 2014/7/30.
  */
 @Entity
 @Table(name="tb_user")
-public class User extends BaseEntity{
-    @Column(name="real_name",length = 20)
+public class User implements Serializable{
+    @Id
+    @Column(name="dataId",length=32)
+    protected String dataId;
+
+    @Column(name="realName",length = 20)
     private String realName;
 
-    @Column(name="login_name",length = 20)
+    @Column(name="loginName",length = 20)
     private String loginName;
 
     @Column(name="password",length = 20)
     private String password;
 
-    @Column(name="phone_number",length = 20)
+    @Column(name="phoneNumber",length = 20)
     private String phoneNumber;
 
     public String getPassword() {

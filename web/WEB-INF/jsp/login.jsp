@@ -68,32 +68,40 @@
             background: #5f7dbe;
             color: #fff;
         }
+
         .main {
             min-height: 400px;
         }
+
         .fn-mt {
             margin-top: 8px;
         }
+
         .fn-mlr {
             margin-left: 10px;
             margin-right: 10px;
         }
+
         .tip01 {
             display: inline-block;
             font-size: 16px;
             color: #4e5563;
             line-height: 19px;
         }
+
         .tip01-warn {
             color: #fe6600;
         }
+
         .login-enter {
             padding: 0 10px;
         }
+
         .login-enter .item {
             margin: 14px 0 0;
             position: relative;
         }
+
         .form-text-box {
             position: relative;
             height: 32px;
@@ -102,6 +110,7 @@
             background: #f5f6f9;
             border-radius: 3px;
         }
+
         .form-text {
             width: 100%;
             height: 18px;
@@ -114,6 +123,7 @@
             line-height: 18px;
             overflow: hidden;
         }
+
         .form-text-clear {
             width: 18px;
             height: 18px;
@@ -124,10 +134,12 @@
             margin-left: -32px;
             overflow: hidden;
         }
+
         .icon {
             background: url(http://x.autoimg.cn/m/news/images/bg-icon-v0303.png) no-repeat;
             background-size: 160px auto;
         }
+
         .form-text-clear .icon-clear {
             display: inline-block;
             width: 18px;
@@ -135,9 +147,11 @@
             background-position: -20px -20px;
             vertical-align: top;
         }
+
         .fn-hide {
             display: none;
         }
+
         .btn-bar-blue {
             display: block;
             padding: 7px 0;
@@ -147,20 +161,23 @@
             color: #fff;
             text-align: center;
         }
+
         .fn-mt-login {
             margin-top: 14px;
         }
+
         .fn-mlr {
             margin-left: 10px;
             margin-right: 10px;
         }
+
         .fn-tright {
             text-align: right;
         }
     </style>
 </head>
 <body>
-<div class>
+<%--<div class>
 </div>
 <div class="nav">
     <h2 class="nav-title">登录</h2>
@@ -192,48 +209,48 @@
     </div>
     <div class="fn-mt-login fn-mlr"><a href="javascript:void(0);" class="btn btn-bar-blue" id="btnLogin">登录</a></div>
     </div>
-</div>
+</div>--%>
 
 
-<%--<table>--%>
-<%--<tr>--%>
-<%--<td>--%>
-<%--<form action="/JinCH/login.do" method="post">--%>
-<%--<tr>--%>
-<%--<th>--%>
-<%--用户名&nbsp;--%>
-<%--</th>--%>
-<%--<td>--%>
-<%--<input type="text" name="username" id="username">--%>
-<%--</td>--%>
-<%--</tr>--%>
-<%--<tr>--%>
-<%--<th>--%>
-<%--密码&nbsp;--%>
-<%--</th>--%>
-<%--<td>--%>
-<%--<input type="text" name="password" id="password">--%>
-<%--</td>--%>
-<%--</tr>--%>
-<%--<tr>--%>
-<%--<td colspan="2" align="center">--%>
-<%--<input type="submit" value="登录">--%>
-<%--</td>--%>
-<%--</tr>--%>
+<table>
+    <tr>
+        <td>
+            <form action="/login.do" method="post">
+                <tr>
+                    <th>
+                        用户名&nbsp;
+                    </th>
+                    <td>
+                        <input type="text" name="username" id="username">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        密码&nbsp;
+                    </th>
+                    <td>
+                        <input type="text" name="password" id="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="登录">
+                    </td>
+                </tr>
 
 
-<%--</form>--%>
-<%--</td>--%>
-<%--</tr>--%>
-<%--<tr>--%>
-<%--<td>--%>
-<%--<form action="/JinCH/testParam.do" method="post">--%>
-<%--参数：<input type="text" name="param1" id="param1">--%>
-<%--<input type="submit" value="参数传递测试">--%>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form action="/testParam.do" method="post">
+                参数：<input type="text" name="param1" id="param1">
+                <input type="submit" value="参数传递测试">
 
-<%--</form>--%>
-<%--</td>--%>
-<%--</tr>--%>
-<%--</table>--%>
+            </form>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
