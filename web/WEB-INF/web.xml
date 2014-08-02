@@ -39,4 +39,25 @@
     <welcome-file-list>
         <welcome-file>/JinCH/login.do</welcome-file>
     </welcome-file-list>
+
+    <!--引入jstl标签-->
+    <jsp-config>
+        <taglib>
+            <taglib-uri>http://java.sun.com/jstl/fmt</taglib-uri>
+            <taglib-location>/WEB-INF/tld/fmt.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+            <taglib-location>/WEB-INF/tld/c.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>http://java.sun.com/jstl/sql</taglib-uri>
+            <taglib-location>/WEB-INF/tld/sql.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>http://java.sun.com/jstl/x</taglib-uri>
+            <taglib-location>/WEB-INF/tld/x.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+
 </web-app>
