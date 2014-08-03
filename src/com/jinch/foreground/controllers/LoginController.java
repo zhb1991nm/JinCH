@@ -32,7 +32,6 @@ public class LoginController {
 
     /**
      * 提交表单登录
-     * 问题，不知道为什么无法得到@PathVariable("username") Stri
      * @param username
      * @param password
      * @return
@@ -41,11 +40,11 @@ public class LoginController {
     public String login1(PrintWriter out,HttpServletRequest request, HttpServletResponse response, HttpSession session,@RequestParam("username") String username,@RequestParam("password") String password,Map model){//
         System.out.println("hello,"+request.getParameter("username")+":name:"+username+":password:"+password+" welcome login.");
 
-        String t = userService.checkUserLogin(username,password);
+        String t = "test";//userService.checkUserLogin(username,password);
         model.put("param1",username);
         model.put("msg",t);
 
-        return "index";
+        return "product";
         //下面两个要一起，return null
 //        out.println("hello:"+request.getParameter("username"));
 //        return null;

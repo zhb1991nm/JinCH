@@ -28,6 +28,14 @@ public class User implements Serializable{
     @Column(name="phoneNumber",length = 20)
     private String phoneNumber;
 
+    public String getDataId() {
+        return dataId;
+    }
+
+    public void setDataId(String dataId) {
+        this.dataId = dataId;
+    }
+
     public String getPassword() {
         return password;
     }
