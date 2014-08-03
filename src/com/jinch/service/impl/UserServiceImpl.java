@@ -13,15 +13,15 @@ import java.util.List;
  * Created by Hua on 2014/7/30.
  */
 @Service
+@Transactional
 public class UserServiceImpl implements IUserService{
     @Autowired
     private IUserDao userDao;
     @Override
-    @Transactional
     public String checkUserLogin(String username, String password) {
         String result = "123";
         User user = new User();
-        user.setDataId("121212");
+        user.setDataId("121212121212");
         user.setLoginName("yang");
         userDao.insert(user);
       //  User userInfo = (User) userDao.queryObject("1");

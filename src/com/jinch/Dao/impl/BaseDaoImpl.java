@@ -28,15 +28,13 @@ public abstract class BaseDaoImpl<T,ID> extends HibernateDaoSupport implements I
         super.setSessionFactory(sessionFactory);
     }
 
-    @Transactional
+//    @Transactional
     public void insert(T t) {
-        Session session = this.getHibernateTemplate().getSessionFactory().getCurrentSession();
+//        Session session = this.getHibernateTemplate().getSessionFactory().getCurrentSession();
 //        Transaction transaction = session.beginTransaction();
         try{
             HibernateTemplate ft = super.getHibernateTemplate();
-            if(!ft.contains(t)){
-                ft.save(t);
-            }
+            ft.saveOrUpdate(t);
 
         }catch(Exception e){e.printStackTrace();}
 //        transaction.commit();
