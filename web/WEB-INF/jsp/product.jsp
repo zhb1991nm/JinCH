@@ -105,7 +105,7 @@
                 </p>
             </div>
             <div class="right hot">
-                <img class="right img" src="../resources/img/hot.png">
+                <img class="right img" src="img/hot.png">
 
                 <p class="num">3.2%</p>
 
@@ -141,7 +141,7 @@
                 </p>
             </div>
             <div class="right hot">
-                <img class="right img" src="/img/hot.png">
+                <img class="right img" src="img/hot.png">
 
                 <p class="num">3.2%</p>
 
@@ -159,7 +159,7 @@
                 </p>
             </div>
             <div class="right hot">
-                <img class="right img" src="/img/hot.png">
+                <img class="right img" src="img/hot.png">
 
                 <p class="num">3.2%</p>
 
@@ -177,7 +177,7 @@
                 </p>
             </div>
             <div class="right hot">
-                <img class="right img" src="/img/hot.png">
+                <img class="right img" src="img/hot.png">
 
                 <p class="num">3.2%</p>
 
@@ -195,7 +195,7 @@
                 </p>
             </div>
             <div class="right hot">
-                <img class="right img" src="/img/hot.png">
+                <img class="right img" src="img/hot.png">
 
                 <p class="num">3.2%</p>
 

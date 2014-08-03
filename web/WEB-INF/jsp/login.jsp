@@ -34,7 +34,7 @@
     <div style="position:absolute; top:6px; right:10px;"><a href="/Register?rt=0&seriesid=0&backurl=http%3a%2f%2fm.autohome.com.cn%2f" class="btn btn-small-blue" >注册</a></div>
 </div>
 <div class="main">
-    <s:form action="/JinCH/login.do" method="post" id="loginForm">
+    <s:form action="/login.do" method="post" id="loginForm">
     <div class="fn-mt fn-mlr" id="ToolTipDiv" style=" display:none;"><span class="tip01 tip01-warn" id="ToolTip"></span></div>
     <div class="login-enter">
         <div class="item noa">
@@ -56,7 +56,7 @@
 <script src="http://x.autoimg.cn/account/Scripts/autozepto-0.1.2.js?v=2014-08-01" type="text/javascript"></script>
 
 <script type="text/javascript">
-function login1(){
+function login(){
     document.getElementById("loginForm").submit();
 }
 var loginPageInfo = {
