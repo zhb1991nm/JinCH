@@ -6,9 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -38,24 +36,26 @@ public abstract class BaseDaoImpl<T,ID> extends HibernateDaoSupport implements I
         }catch(Exception e){e.printStackTrace();}
         transaction.commit();
     }
-    @Transactional
+
     @Override
     public List<?> queryAll() {
 
         Session session = this.getHibernateTemplate().getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
+
         Query query = session.createQuery("from "+this.clazz.getName());
         List<?> result = query.list();
-        tx.commit();
+//        tx.commit();
         return result;
     }
 
     @Override
     public T queryObject(String id) {
         Session session = this.getHibernateTemplate().getSessionFactory().getCurrentSession();
-        Transaction tx = session.beginTransaction();
+//        Transaction tx = session.beginTransaction();
+
         T t = (T)this.getHibernateTemplate().get(clazz,id);
-        tx.commit();
+//        tx.commit();
         return t;
     }
 }

@@ -18,10 +18,10 @@ public class UserServiceImpl implements IUserService{
     @Override
     public String checkUserLogin(String username, String password) {
         String result = "123";
-        User user = new User();
+       /* User user = new User();
         user.setDataId("121212");
         user.setLoginName("yang");
-        userDao.insert(user);
+        userDao.insert(user);*/
       //  User userInfo = (User) userDao.queryObject("1");
         List<User> userList = (List<User>) userDao.queryAll();
 
@@ -30,6 +30,7 @@ public class UserServiceImpl implements IUserService{
         }else{
             result = "empty";
         }
+        System.out.println(result);
         return result;
     }
 }
