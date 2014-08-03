@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <script src="resources/script/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="resources/script/login.js" type="text/javascript"></script>
     <title></title>
 </head>
 <body>
-    <img src="img/test.jpg">
+    <img src="img/test.jpg" onclick='javascript:login();'>
 </body>
 </html>

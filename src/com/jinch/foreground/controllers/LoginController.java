@@ -33,16 +33,16 @@ public class LoginController {
 
     /**
      * 提交表单登录
-     * @param username
-     * @param password
+     * @param txtUserName
+     * @param txtPwd
      * @return
      */
     @RequestMapping(value = "/login" , method = RequestMethod.POST) //@RequestMapping("/login1/{username}")
-    public String login1(PrintWriter out,HttpServletRequest request, HttpServletResponse response, HttpSession session,@RequestParam("username") String username,@RequestParam("password") String password,Map model){//
-        System.out.println("hello,"+request.getParameter("username")+":name:"+username+":password:"+password+" welcome login.");
+    public String login1(PrintWriter out,HttpServletRequest request, HttpServletResponse response, HttpSession session,@RequestParam("txtUserName") String txtUserName,@RequestParam("txtPwd") String txtPwd,Map model){//
+        System.out.println("hello,:name:"+txtUserName+":password:"+txtPwd+" welcome login.");
 
         String t = "test";//userService.checkUserLogin(username,password);
-        model.put("param1",username);
+        model.put("param1",txtUserName);
         model.put("msg",t);
 
         return "product";

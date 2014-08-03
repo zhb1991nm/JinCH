@@ -1,8 +1,8 @@
 /**
  * Created by 敏华 on 2014/8/3.
  */
-$.(document).ready(function(){
-    alert(12);
+$(document).ready(function() {
+
     var loginPageInfo = {
         userName: $("#txtUserName"),
         pwd: $("#txtPwd"),
@@ -186,10 +186,11 @@ $.(document).ready(function(){
         }
     }
     loginPageInfo.Init();
-})
+
+});
 
 function login(){
-    alert(1);
+
     $("#loginForm").submit();
 }
 
