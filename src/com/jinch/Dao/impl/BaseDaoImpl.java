@@ -31,31 +31,31 @@ public abstract class BaseDaoImpl<T,ID> extends HibernateDaoSupport implements I
 
     @Transactional
     public void insert(T t) {
-        /*Session session = this.getHibernateTemplate().getSessionFactory().getCurrentSession();*/
-        /*Transaction transaction = session.beginTransaction();*/
+        Session session = this.getHibernateTemplate().getSessionFactory().getCurrentSession();
+        Transaction transaction = session.beginTransaction();
         try{
             super.getHibernateTemplate().save(t);
         }catch(Exception e){e.printStackTrace();}
-        /*transaction.commit();*/
+        transaction.commit();
     }
     @Transactional
     @Override
     public List<?> queryAll() {
 
         Session session = this.getHibernateTemplate().getSessionFactory().getCurrentSession();
-        /*Transaction tx = session.beginTransaction();*/
+        Transaction tx = session.beginTransaction();
         Query query = session.createQuery("from "+this.clazz.getName());
         List<?> result = query.list();
-       /* tx.commit();*/
+        tx.commit();
         return result;
     }
 
     @Override
     public T queryObject(String id) {
         Session session = this.getHibernateTemplate().getSessionFactory().getCurrentSession();
-        /*Transaction tx = session.beginTransaction();*/
+        Transaction tx = session.beginTransaction();
         T t = (T)this.getHibernateTemplate().get(clazz,id);
-        /*tx.commit();*/
+        tx.commit();
         return t;
     }
 }
