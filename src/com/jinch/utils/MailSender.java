@@ -12,7 +12,7 @@ import org.springframework.mail.javamail.MimeMailMessage;
 import org.springframework.util.StringUtils;
 
 /**
- * Created by user on 2014/8/4.
+ * Created by zhb on 2014/8/4.
  */
 public class MailSender {
 
@@ -32,12 +32,12 @@ public class MailSender {
 
 
     /**
-     * ·¢ËÍÓÊ¼ş
-     * @param from        À´Ô´µØÖ·
-     * @param to          Ä¿±êµØÖ·
-     * @param subject     ÓÊ¼şÖ÷Ìâ
-     * @param content     ÓÊ¼şÄÚÈİ
-     * @param attachments ±¾µØ¸½¼şµÄÂ·¾¶
+     * ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½
+     * @param from        å‘é€é‚®ä»¶åœ°å€
+     * @param to          ç›®æ ‡é‚®ä»¶åœ°å€
+     * @param subject     æ ‡é¢˜
+     * @param content     æ­£æ–‡
+     * @param attachments é™„ä»¶
      */
     public void sendMail(String from, String to, String subject, String content, List<String> attachments)
     {
@@ -45,13 +45,13 @@ public class MailSender {
     }
 
     /**
-     * ·¢ËÍÓÊ¼ş
-     * @param from        À´Ô´µØÖ·
-     * @param to          Ä¿±êµØÖ·
-     * @param subject     ÓÊ¼şÖ÷Ìâ
-     * @param content     ÓÊ¼şÄÚÈİ
-     * @param attachments ±¾µØ¸½¼şµÄÂ·¾¶
-     * @param filenames   ¸½¼şµÄÏÔÊ¾Ãû³Æ
+     * ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½
+     * @param from        å‘é€é‚®ä»¶åœ°å€
+     * @param to          ç›®æ ‡é‚®ä»¶åœ°å€
+     * @param subject     æ ‡é¢˜
+     * @param content     æ­£æ–‡
+     * @param attachments é™„ä»¶
+     * @param filenames   æ–‡ä»¶å
      */
     public void sendMail(String from, String to, String subject, String content, List<String> attachments, List<String> filenames)
     {
@@ -59,8 +59,8 @@ public class MailSender {
         if (!StringUtils.isEmpty(this.smtpUser) && !StringUtils.isEmpty(this.smtpPassword)) {
             Properties p = new Properties();
             p.put("mail.smtp.auth", "true");
-            p.put("mail.smtp.timeout",180000); // Ä¬ÈÏ5·ÖÖÓ
-            p.put("mail.smtp.connectiontimeout",60000); // Ä¬ÈÏ1·ÖÖÓ
+            p.put("mail.smtp.timeout",180000); // Ä¬ï¿½ï¿½5ï¿½ï¿½ï¿½ï¿½
+            p.put("mail.smtp.connectiontimeout",60000); // Ä¬ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½
             mailSender.setPort(this.smtpPort);
             mailSender.setJavaMailProperties(p);
             mailSender.setUsername(this.smtpUser);

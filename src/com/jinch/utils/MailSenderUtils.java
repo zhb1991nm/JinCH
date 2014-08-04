@@ -9,7 +9,7 @@ import java.net.URL;
 import java.util.List;
 
 /**
- * Created by user on 2014/8/4.
+ * Created by zhb on 2014/8/4.
  */
 public class MailSenderUtils {
     protected final Log logger = LogFactory.getLog(getClass());
@@ -47,12 +47,12 @@ public class MailSenderUtils {
     }
 
     /**
-     * 发送邮件
+     * 锟斤拷锟斤拷锟绞硷拷
      *
-     * @param to          目标地址
-     * @param subject     邮件主题
-     * @param content     邮件内容
-     * @param attachments 本地附件的路径
+     * @param to          鐩爣閭
+     * @param subject     鏍囬
+     * @param content     姝ｆ枃
+     * @param attachments 闄勪欢
      */
     public void sendMail(String to, String subject, String content, List<String> attachments) {
         MailSender _sender = new MailSender(this.smtpServer, this.smtpUser, this.smtpPassword);
