@@ -176,7 +176,6 @@ $(document).ready(function() {
             self.loadIng.hide();
             self.userName.removeAttr('disabled');
             self.pwd.removeAttr('disabled');
-//            self.code.removeAttr('disabled');
             self.btnLogin.removeAttr('disabled');
         },
         bind: function (fn, obj, arg) {
@@ -185,6 +184,7 @@ $(document).ready(function() {
                 fn.apply(obj, arg.concat(arguments));
             }
         }
+
     }
     loginPageInfo.Init();
 
