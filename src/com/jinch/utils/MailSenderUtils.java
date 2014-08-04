@@ -1,6 +1,7 @@
 package com.jinch.utils;
 
 import org.apache.commons.configuration.PropertiesConfiguration;
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -55,7 +56,7 @@ public class MailSenderUtils {
      */
     public void sendMail(String to, String subject, String content, List<String> attachments) {
         MailSender _sender = new MailSender(this.smtpServer, this.smtpUser, this.smtpPassword);
-        if (!StringUtil.isBlank(to) && !StringUtil.isBlank(this.fromSys)) {
+        if (StringUtils.isNotBlank(to) && StringUtils.isNotBlank(this.fromSys)) {
             _sender.sendMail(fromSys, to, subject, content, attachments);
         }
     }
