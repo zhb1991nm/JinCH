@@ -14,7 +14,7 @@ $(document).ready(function() {
         loadIng: $("#spanLoadingLayer"),
         toolTip: $("#ToolTip"),
         toolTipDiv: $("#ToolTipDiv"),
-        backUrl: "http://m.autohome.com.cn/",
+        backUrl: "login.jsp",
         goBackBtn: $("#btnBack"),
         Init: function () {
             var self = this;
@@ -127,39 +127,40 @@ $(document).ready(function() {
                 return;
             }
             self.setControlDisabled();
-//        $.post("/Login/MobileLogin", { name: encodeURIComponent(self.userName.val()), pwd: self.pwd.val(), validcode: self.code.val(), appid: 'm', djax: (new Date()).getTime() }, function (data) {
-//            self.setControlUnDisabled();
-//            if (!data) {
-//                self.setControlUnDisabled();
-//                self.toolTip.html('<i class="icon-tip icon-warn"></i>登录失败');
-//                self.loadCountIp();
-//                self.toolTipDiv.css('display', 'block');
-//                return;
-//            }
-//            if (data.body.success == 0) {
-//                self.toolTip.html('<i class="icon-tip icon-warn"></i>' + data.body.message);
-//                self.loadCountIp();
-//                if (data.body.message == '验证码不正确！') {
-//                    self.codeDiv.attr("class", 'form-text-box form-text-focus form-text-hadin form-text-error');
-//                    self.pwdDiv.attr("class", 'form-text-box form-text-hadin');
-//                } else {
-//                    self.pwdDiv.attr("class", 'form-text-box form-text-focus form-text-hadin form-text-error');
-//                }
-//                self.toolTipDiv.css('display', 'block');
-//                return;
-//            }
-//            else if (data.body.success == 1) {
-//
-//                self.toolTip.attr("class", "tip01 tip01-ok");
-//                self.toolTip.html('<i class="icon-tip icon-ok"></i>登录成功');
-//                self.toolTipDiv.css('display', 'block');
-//                self.JLoad(data.body.auUrl, self.backUrl);                     ;
-//            }
-//            else {
-//                self.toolTip.html('<i class="icon-tip icon-warn"></i>非法登录');
-//                self.toolTipDiv.css('display', 'block');
-//            }
-//        }, "json");
+        $.post("/JinCH/login.do", { username: encodeURIComponent(self.userName.val()), pwd: self.pwd.val(), appid: 'm', djax: (new Date()).getTime() }, function (data) {
+            //self.setControlUnDisabled();
+            alert(data);
+            if (!data) {
+                self.setControlUnDisabled();
+                self.toolTip.html('<i class="icon-tip icon-warn"></i>登录失败');
+                self.loadCountIp();
+                self.toolTipDiv.css('display', 'block');
+                return;
+            }
+            if (data.success == 0) {
+                self.toolTip.html('<i class="icon-tip icon-warn"></i>' + data.body.message);
+                self.loadCountIp();
+                if (data.body.message == '验证码不正确！') {
+                    self.codeDiv.attr("class", 'form-text-box form-text-focus form-text-hadin form-text-error');
+                    self.pwdDiv.attr("class", 'form-text-box form-text-hadin');
+                } else {
+                    self.pwdDiv.attr("class", 'form-text-box form-text-focus form-text-hadin form-text-error');
+                }
+                self.toolTipDiv.css('display', 'block');
+                return;
+            }
+            else if (data.success == 1) {
+
+                self.toolTip.attr("class", "tip01 tip01-ok");
+                self.toolTip.html('<i class="icon-tip icon-ok"></i>登录成功');
+                self.toolTipDiv.css('display', 'block');
+                window.location.href = data.auUrl;                     ;
+            }
+            else {
+                self.toolTip.html('<i class="icon-tip icon-warn"></i>非法登录');
+                self.toolTipDiv.css('display', 'block');
+            }
+        }, "json");
         },
 
         setControlDisabled: function () {
@@ -167,7 +168,7 @@ $(document).ready(function() {
             self.loadIng.show();
             self.userName.attr('disabled', true);
             self.pwd.attr('disabled', true);
-            self.code.attr('disabled', true);
+//            self.code.attr('disabled', true);
             self.btnLogin.attr('disabled', true);
         },
         setControlUnDisabled: function () {
@@ -175,7 +176,7 @@ $(document).ready(function() {
             self.loadIng.hide();
             self.userName.removeAttr('disabled');
             self.pwd.removeAttr('disabled');
-            self.code.removeAttr('disabled');
+//            self.code.removeAttr('disabled');
             self.btnLogin.removeAttr('disabled');
         },
         bind: function (fn, obj, arg) {
@@ -191,7 +192,7 @@ $(document).ready(function() {
 
 function login(){
 
-    $("#loginForm").submit();
+   // $("#loginForm").submit();
 }
 
 

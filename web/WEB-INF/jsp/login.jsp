@@ -37,7 +37,6 @@
 </div>
 <div class="main">
 
-    <s:form action="/JinCH/login.do" method="post" id="loginForm">
         <div class="fn-mt fn-mlr" id="ToolTipDiv" style=" display:none;"><span class="tip01 tip01-warn"
                                                                                id="ToolTip"></span></div>
         <div class="login-enter">
@@ -54,9 +53,8 @@
                 </div>
             </div>
         </div>
-        <div class="fn-mt-login fn-mlr"><a href='javascript:login();' class="btn btn-bar-blue" id="btnLogin">登录</a>
+        <div class="fn-mt-login fn-mlr"><a href='#' class="btn btn-bar-blue" id="btnLogin">登录</a>
         </div>
-    </s:form>
 </div>
 
 </body>
