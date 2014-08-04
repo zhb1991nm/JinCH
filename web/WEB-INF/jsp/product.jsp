@@ -6,88 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="commons/taglibs.jsp"%>
 <html>
 <head>
+    <%@ include file="commons/meta.jsp"%>
+    <%@ include file="commons/header.jsp"%>
     <title>product</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <style type="text/css">
-
-        .selector{
-            background-color: lightgrey;
-            height: 40px;
-        }
-
-        .productlist {
-        }
-
-        .list {
-            padding: 10px 10px 10px 10px;
-            border-bottom: 1px solid #CCC;
-            position: relative;
-            min-height: 50px;
-        }
-
-        .left {
-            float: left;
-        }
-
-        .right {
-            float: right;
-        }
-
-        .title {
-            font-size: 14px;
-            float: left;
-        }
-
-        .subtitle {
-            font-size: 10px;
-            color: #09F;
-            margin-left: 5px;
-        }
-
-        .gray {
-            font-size: 10px;
-            color: #666;
-        }
-
-        .test {
-            margin-top: 10px;
-        }
-
-        .hot {
-            border: 1px solid #ff3c00;
-            border-radius: 2px;
-            width: 80px;
-            height: 50px;
-        }
-
-        .img {
-            width: 20px;
-            height: 20px;
-        }
-
-        .num {
-            color: #ff3c00;
-            font-size: 14px;
-            margin-left: 25px;
-            height: 8px;
-        }
-
-        .topback {
-            margin-left: 10px;
-            height: 8px;
-        }
-    </style>
-    <script type="text/javascript">
-        function listOnClick(id){
-
-        }
-    </script>
+    <link type="text/css" rel="stylesheet" href="resources/style/product.css"/>
+    <script type="text/javascript" src="resources/script/product.js"></script>
 </head>
 <body>
 <div class="main">

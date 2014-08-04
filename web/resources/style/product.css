@@ -1,0 +1,66 @@
+.selector{
+    background-color: lightgrey;
+    height: 40px;
+}
+
+.productlist {
+}
+
+.list {
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid #CCC;
+    position: relative;
+    min-height: 50px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.title {
+    font-size: 14px;
+    float: left;
+}
+
+.subtitle {
+    font-size: 10px;
+    color: #09F;
+    margin-left: 5px;
+}
+
+.gray {
+    font-size: 10px;
+    color: #666;
+}
+
+.test {
+    margin-top: 10px;
+}
+
+.hot {
+    border: 1px solid #ff3c00;
+    border-radius: 2px;
+    width: 80px;
+    height: 50px;
+}
+
+.img {
+    width: 20px;
+    height: 20px;
+}
+
+.num {
+    color: #ff3c00;
+    font-size: 14px;
+    margin-left: 25px;
+    height: 8px;
+}
+
+.topback {
+    margin-left: 10px;
+    height: 8px;
+}

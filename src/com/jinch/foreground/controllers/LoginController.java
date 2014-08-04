@@ -27,7 +27,7 @@ public class LoginController {
      */
     @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String login(){
-        String t = userService.checkUserLogin("hua","1212");
+       // String t = userService.checkUserLogin("hua","1212");
         return "login";
     }
 
