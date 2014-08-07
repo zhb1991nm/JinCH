@@ -51,7 +51,7 @@ public class LoginController {
 
         JSONObject obj = new JSONObject();
         obj.put("success","1");
-        obj.put("auUrl","product.do");
+        obj.put("auUrl","product.do");//跳转地址
 
 
         String json = "{body:[{'success':'1','name':'Bill Gates','street':'Fifth Avenue New York 666','age':56,'phone':'555 1234567'}]}";

@@ -129,7 +129,7 @@ $(document).ready(function() {
             self.setControlDisabled();
         $.post("/JinCH/login.do", { username: encodeURIComponent(self.userName.val()), pwd: self.pwd.val(), appid: 'm', djax: (new Date()).getTime() }, function (data) {
             //self.setControlUnDisabled();
-            alert(data);
+
             if (!data) {
                 self.setControlUnDisabled();
                 self.toolTip.html('<i class="icon-tip icon-warn"></i>登录失败');
